@@ -1,0 +1,11 @@
+.apresentacao{
+    height: 80vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao .minha-foto{
+    border-radius: 50%;
+    display: flex;
+    max-width: 450px;
+}

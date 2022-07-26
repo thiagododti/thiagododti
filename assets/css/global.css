@@ -7,6 +7,10 @@
     font-family: "eurostile", sans-serif;
 }
 
+a{
+    color: black;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -49,23 +53,6 @@ header .menu-lista{
 header .menu{
     justify-content: space-between;
 }
-
-.apresentacao{
-    height: 80vh;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.apresentacao .texto-apresentacao{
-    min-height: 200px;
-}
-
-.apresentacao .minha-foto{
-    border-radius: 50%;
-    display: flex;
-    max-width: 450px;
-}
-
 footer{
     display: flex;
     background-color: #D4D5DA;
