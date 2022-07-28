@@ -17,13 +17,16 @@ ul {
     padding: 0;
 }
 
-ul li a {
-    color: black;
-}
-
 div img{
     display: block;
     width: 100%;
+}
+
+header{
+    background-color: #D4D5DA;
+    display: flex;
+    align-items: center;
+    height: 116px;
 }
 
 .flex-container{
@@ -32,14 +35,6 @@ div img{
     margin: auto;
     width: 100%;
     min-width: 320px;
-}
-
-header{
-    background-color: #D4D5DA;
-    display: flex;
-    align-items: center;
-    height: 116px;
-    
 }
 
 header .menu-lista{
@@ -53,9 +48,27 @@ header .menu-lista{
 header .menu{
     justify-content: space-between;
 }
+
 footer{
     display: flex;
     background-color: #D4D5DA;
-    align-items: center;
     height: 70px;
+}
+
+.footer{
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer #btn-dm{
+    border-radius: 80px;
+    background-color: black;
+    color: white;
+    height: 50px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    
+
 }
