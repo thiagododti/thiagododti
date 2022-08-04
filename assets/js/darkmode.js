@@ -31,7 +31,6 @@ const footer = document.getElementsByTagName('footer')[0];
 const a = document.getElementsByTagName('a')[0];
 const h1 = document.getElementsByTagName('h1')[0];
 const h2 = document.getElementsByTagName('h2')[0];
-const p = document.getElementsByTagName('p')[0];
 const header = document.getElementsByTagName('header')[0];
 
 
