@@ -32,6 +32,19 @@ header {
     height: 116px;
 }
 
+header .menu-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+header .menu {
+    justify-content: space-between;
+}
+
+/* flex container */
 .flex-container {
     display: flex;
     max-width: 990px;
@@ -40,7 +53,7 @@ header {
     min-width: 320px;
 
 }
-
+/* corpo de conteudo */
 .conteudo-corpo {
     margin: 0px 0px 80px 0px;
     padding: 0px;
@@ -74,17 +87,7 @@ header {
     background-color: black;
 }
 
-header .menu-lista {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-}
-
-header .menu {
-    justify-content: space-between;
-}
+ /* footer */
 
 footer {
     display: flex;
