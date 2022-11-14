@@ -2,12 +2,10 @@
     margin: 0;
     padding: 0;
     border: none;
-    text-decoration: none;
+    
     box-sizing: border-box;
     font-family: 'eurostile', sans-serif;
 }
-
-
 
 ul {
     list-style: none;
@@ -17,31 +15,66 @@ ul {
 }
 
 
-div img{
+div img {
     display: block;
     width: 100%;
 }
 
-a{
+a {
     color: black;
+    text-decoration: none;
 }
 
-header{
+header {
     background-color: #D4D5DA;
     display: flex;
     align-items: center;
     height: 116px;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
-    max-width: 992px;
+    max-width: 990px;
     margin: auto;
     width: 100%;
     min-width: 320px;
+
 }
 
-header .menu-lista{
+.conteudo-corpo {
+    margin: 0px 0px 80px 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.conteudo {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+
+}
+
+.conteudo-texto {
+    margin: 0px 10px 0px 10px;
+}
+
+.content-img {
+    max-width: 40%;
+}
+
+.conteudo-corpo a {
+    text-decoration: none;
+    color: black;
+}
+
+.conteudo-corpo a:hover{
+    color: white;
+    background-color: black;
+}
+
+header .menu-lista {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,22 +82,25 @@ header .menu-lista{
     max-width: 500px;
 }
 
-header .menu{
+header .menu {
     justify-content: space-between;
 }
 
-footer{
+footer {
     display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     background-color: #D4D5DA;
     height: 70px;
 }
 
-.footer{
+.footer {
     align-items: center;
     justify-content: space-between;
 }
 
-footer #btn-dm{
+footer #btn-dm {
     border-radius: 80px;
     background-color: black;
     color: white;
@@ -73,6 +109,4 @@ footer #btn-dm{
     width: 100px;
     text-align: center;
     line-height: 50px;
-    
-
 }
