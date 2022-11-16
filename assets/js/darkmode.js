@@ -13,10 +13,10 @@ function trocarClasse() {
     header.classList.toggle(darkModeClass);
 }
 
-function trocaTexto(){
+function trocaTexto() {
     const lightMode = "Light Mode";
     const darkMode = "Dark Mode";
-    if(BtnDm.classList.contains(darkModeClass)){
+    if (BtnDm.classList.contains(darkModeClass)) {
         BtnDm.innerHTML = lightMode;
         return;
     }
@@ -30,7 +30,7 @@ const body = document.getElementsByTagName('body')[0];
 const footer = document.getElementsByTagName('footer')[0];
 const a = document.getElementsByTagName('a')[0];
 const h1 = document.getElementsByTagName('h1')[0];
-const h2 = document.getElementsByTagName('h2')[0];
+//const h2 = document.getElementsByTagName('h2')[0];
 const header = document.getElementsByTagName('header')[0];
 
 

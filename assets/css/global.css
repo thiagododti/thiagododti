@@ -77,15 +77,6 @@ header .menu {
     max-width: 40%;
 }
 
-.conteudo-corpo a {
-    text-decoration: none;
-    color: black;
-}
-
-.conteudo-corpo a:hover{
-    color: white;
-    background-color: black;
-}
 
  /* footer */
 
