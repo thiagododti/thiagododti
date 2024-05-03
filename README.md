@@ -16,7 +16,7 @@ Estou empenhado em aprimorar minhas habilidades e estou aberto a oportunidades q
 ## Habilidades
 
 ![PHP](https://img.shields.io/badge/php-f70b0b.svg?style=for-the-badge&logo=php&logoColor=white)
-![Python](https://img.shields.io/badge/python-f70b0b?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Python](https://img.shields.io/badge/python-f70b0b?style=for-the-badge&logo=python&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-f70b0b.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQLServer](https://img.shields.io/badge/SQL%20Server-f70b0b?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-f70b0b.svg?style=for-the-badge&logo=sqlite&logoColor=white)
