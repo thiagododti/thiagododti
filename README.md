@@ -28,6 +28,3 @@ Estou empenhado em aprimorar minhas habilidades e estou aberto a oportunidades q
 
 
 ## Minhas Contribuições
-
-[![Repo Card](https://github-readme-stats.vercel.app/api/pin/?username=thiagododti&repo=Python&bg_color=000&border_color=30A3DC&show_icons=true&icon_color=30A3DC&title_color=E94D5F&text_color=FFF)](https://github.com/thiagododti/Python)
-[![Repo Card](https://github-readme-stats.vercel.app/api/pin/?username=thiagododti&repo=treino_responsividade&bg_color=000&border_color=30A3DC&show_icons=true&icon_color=30A3DC&title_color=E94D5F&text_color=FFF)](https://github.com/thiagododti/treino_responsividade)
