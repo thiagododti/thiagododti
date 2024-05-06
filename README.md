@@ -8,7 +8,7 @@ Minha paixão pela programação me motiva a continuar aprendendo e enfrentando 
 
 Estou empenhado em aprimorar minhas habilidades e estou aberto a oportunidades que me permitam crescer e contribuir com meus conhecimentos
 
-## Conect-se comigo
+## Conecte-se comigo
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-f70b0b?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thiagododti/)
 [![Instagram](https://img.shields.io/badge/-Instagram-f70b0b?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/iam.thiago/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-f70b0b?style=for-the-badge&logo=todoist&logoColor=white)]([https://seulink.com]([https://thiagododti.github.io/portfolio/index.html](https://thiagododti.github.io/thiagododti/)))
