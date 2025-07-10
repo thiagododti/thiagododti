@@ -1,12 +1,27 @@
 
 # Thiago! 👋
 
-## 🚀 Sobre mim
-Olá! Sou um desenvolvedor Junior em constante busca de aprimoramento. Tenho experiência com linguagens como PHP, Python e SQL, embora ainda esteja desenvolvendo meu domínio total nessas áreas. Sou formado em Análise e Desenvolvimento de Sistemas, o que me proporcionou uma base sólida em conceitos de programação e desenvolvimento de software.
+## 👋 Sobre mim
 
-Minha paixão pela programação me motiva a continuar aprendendo e enfrentando desafios. Além disso, também tenho conhecimento em Power BI, uma ferramenta poderosa para análise de dados e geração de relatórios interativos.
+Olá! Sou desenvolvedor com formação em Análise e Desenvolvimento de Sistemas e foco em construir soluções reais e eficientes. Tenho experiência prática em desenvolvimento backend com **Python** e **Django**, além de criar visualizações e dashboards com **Streamlit** e **Power BI**.
 
-Estou empenhado em aprimorar minhas habilidades e estou aberto a oportunidades que me permitam crescer e contribuir com meus conhecimentos
+Atuo com **integrações via API (REST/GraphQL)**, manipulação e análise de dados com **pandas**, automações de tarefas, e consultas otimizadas em **MySQL**. Também trabalho com **boas práticas de versionamento**, modularização de código e organização de projetos — sempre buscando produtividade e manutenibilidade.
+
+Além disso, estou aprofundando meus conhecimentos em **Node.js com Express**, focando em aplicações backend modernas. Estou constantemente evoluindo tecnicamente e gosto de aprender com base em desafios práticos e reais.
+
+## 🧰 Tecnologias e Ferramentas
+
+- **Linguagens**: Python, SQL, PHP (experiência anterior)
+- **Frameworks**: Django, Node.js (Express)
+- **Data/BI**: pandas, Power BI, Streamlit, XlsxWriter
+- **Banco de Dados**: MySQL
+- **APIs**: REST, GraphQL (ex: API do Monday.com)
+- **Ferramentas**: Git, VSCode, Docker (em estudo), dotenv, AgGrid
+- **Outros conhecimentos**: django-filter, drf-spectacular, Tailwind CSS (com Django)
+
+## 🚀 Em constante evolução
+
+Sou movido por desafios. Gosto de transformar problemas em soluções simples, escaláveis e úteis para quem vai usá-las. Estou sempre explorando novas ferramentas, padrões de projeto e práticas de mercado para evoluir como desenvolvedor e entregar software de qualidade.
 
 ## Conecte-se comigo
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-f70b0b?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thiagododti/)
