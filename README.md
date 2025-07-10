@@ -23,7 +23,6 @@ Estou empenhado em aprimorar minhas habilidades e estou aberto a oportunidades q
 ![Power Bi](https://img.shields.io/badge/power_bi-f70b0b?style=for-the-badge&logo=powerbi&logoColor=white)
 
 ## Status GitHub
-
-![thiagododti's GitHub stats](https://github-readme-stats.vercel.app/api?username=thiagododti&show_icons=true&theme=dracula)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=thiagododti&layout=compact)
 
 ## Minhas Contribuições
