@@ -24,7 +24,6 @@ Estou empenhado em aprimorar minhas habilidades e estou aberto a oportunidades q
 
 ## Status GitHub
 
-![Top Langs](https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=thiagododti&layout=compact&bg_color=000&border_color=30A3DC&title_color=E94D5F&text_color=FFF)
-[![thiagododti's GitHub stats](https://github-readme-stats.vercel.app/api?username=thiagododti)](https://github.com/thiagododti/github-readme-stats)
+![thiagododti's GitHub stats](https://github-readme-stats.vercel.app/api?username=thiagododti&show_icons=true&theme=dracula)
 
 ## Minhas Contribuições
