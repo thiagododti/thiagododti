@@ -11,7 +11,7 @@ Além disso, estou aprofundando meus conhecimentos em **Node.js com Express**, f
 
 ## 🧰 Tecnologias e Ferramentas
 
-- **Linguagens**: Python, SQL, PHP (experiência anterior)
+- **Linguagens**: Python, Java, SQL, PHP (experiência anterior)
 - **Frameworks**: Django, Node.js (Express)
 - **Data/BI**: pandas, Power BI, Streamlit, XlsxWriter
 - **Banco de Dados**: MySQL
