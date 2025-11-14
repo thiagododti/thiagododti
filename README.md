@@ -38,5 +38,3 @@ Essa vivência me proporcionou uma base técnica sólida, que hoje me ajuda a co
 
 ## Status GitHub
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=thiagododti&layout=compact)
-
-## Minhas Contribuições
