@@ -3,25 +3,24 @@
 
 ## 👋 Sobre mim
 
-Olá! Sou desenvolvedor com formação em Análise e Desenvolvimento de Sistemas e foco em construir soluções reais e eficientes. Tenho experiência prática em desenvolvimento backend com **Python** e **Django**, além de criar visualizações e dashboards com **Streamlit** e **Power BI**.
+Estou há um ano trabalhando com desenvolvimento full stack, onde iniciei meus estudos em desenvolvimento web utilizando o framework Django.
+Atualmente, venho ampliando meus conhecimentos também em frontend, buscando uma base sólida tanto no backend quanto no frontend, com o objetivo de me tornar um desenvolvedor full stack completo.
 
-Atuo com **integrações via API (REST/GraphQL)**, manipulação e análise de dados com **pandas**, automações de tarefas, e consultas otimizadas em **MySQL**. Também trabalho com **boas práticas de versionamento**, modularização de código e organização de projetos — sempre buscando produtividade e manutenibilidade.
+Além do desenvolvimento web, atuo com análise de dados, desde o tratamento até a criação de dashboards, utilizando principalmente o Power BI.
+Também desenvolvo automações de sistemas e rotinas de raspagem de dados, sempre com foco em otimizar processos e transformar dados em informações úteis.
 
-Além disso, estou aprofundando meus conhecimentos em **Node.js com Express**, focando em aplicações backend modernas. Estou constantemente evoluindo tecnicamente e gosto de aprender com base em desafios práticos e reais.
+Antes de ingressar na área de desenvolvimento, trabalhei por cinco anos com infraestrutura de TI, adquirindo experiência em gerenciamento de redes, backups, fileservers e bancos de dados.
+Essa vivência me proporcionou uma base técnica sólida, que hoje me ajuda a compreender melhor o desempenho e a segurança das aplicações que desenvolvo.
 
 ## 🧰 Tecnologias e Ferramentas
 
-- **Linguagens**: Python, Java, SQL, PHP (experiência anterior)
-- **Frameworks**: Django, Node.js (Express)
-- **Data/BI**: pandas, Power BI, Streamlit, XlsxWriter
-- **Banco de Dados**: MySQL
-- **APIs**: REST, GraphQL (ex: API do Monday.com)
-- **Ferramentas**: Git, VSCode, Docker (em estudo), dotenv, AgGrid
-- **Outros conhecimentos**: django-filter, drf-spectacular, Tailwind CSS (com Django)
-
-## 🚀 Em constante evolução
-
-Sou movido por desafios. Gosto de transformar problemas em soluções simples, escaláveis e úteis para quem vai usá-las. Estou sempre explorando novas ferramentas, padrões de projeto e práticas de mercado para evoluir como desenvolvedor e entregar software de qualidade.
+- **Linguagens**: Python, Java, PHP
+- **Frameworks**: Django, Node.js, React, Tailwind
+- **Data/BI**: Pandas, Power BI
+- **Banco de Dados**: MySQL, PostgreeSql, SQL Server, MongoDB, SQLite
+- **APIs**: API, GraphQL
+- **Infraestrutura**: Docker
+- **Ferramentas**: Git, Github, N8n, RabbitMQ
 
 ## Conecte-se comigo
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-f70b0b?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thiagododti/)
