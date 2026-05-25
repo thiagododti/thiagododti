@@ -35,6 +35,3 @@ Essa vivência me proporcionou uma base técnica sólida, que hoje me ajuda a co
 ![SQLServer](https://img.shields.io/badge/SQL%20Server-f70b0b?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-f70b0b.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Power Bi](https://img.shields.io/badge/power_bi-f70b0b?style=for-the-badge&logo=powerbi&logoColor=white)
-
-## Status GitHub
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=thiagododti&layout=compact)
