@@ -1,66 +1,954 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR" id="html-root">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thiago Dantas – Desenvolvedor Full Stack</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio | Thiago Dantas</title>
-    <!-- css global-->
-    <link rel="stylesheet" href="assets/css/global.css">
-    <!-- css inicio-->
-    <link rel="stylesheet" href="assets/css/inicio.css">
-    <!-- css darkmode-->
-    <link rel="stylesheet" href="assets/css/darkmode.css">
-</head>
+            :root {
+                --bg: #0d1117;
+                --surface: #161b22;
+                --border: #30363d;
+                --accent: #58a6ff;
+                --accent2: #3fb950;
+                --accent3: #f78166;
+                --text: #e6edf3;
+                --muted: #8b949e;
+                --radius: 12px;
+            }
 
-<body>
-    <header>
-        <div class="flex-container menu">
-            <div>
-                <h1><a href="index.html">Thiago Dantas</a></h1>
-            </div>
-            <ul class="menu-lista">
-                <li><a href="index.html">Ínicio</a></li>
-                <li><a href="sobre.html">Sobre mim</a></li>
-                <li><a href="conhecimentos.html">Conhecimentos</a></li>
-            </ul>
-        </div>
-    </header>
-    <div class="flex-container apresentacao">
-        <div class="texto-apresentacao">
-            <h2>Olá, meu nome é</h2>
-            <h1>Thiago de Oliveira Dantas</h1>
-            <h2>Aspirante a desenvolvedor Front-End</h2>
-        </div>
-        <div class="card">
-            <div class="card-corpo">
-                <div class="card-frente">
-                    <img class="minha-foto" src="assets/img/foto.jpg" alt="Minha foto">
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+            }
+
+            /* ── NAV ── */
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 100;
+                background: rgba(13, 17, 23, 0.85);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border);
+                padding: 0 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 60px;
+            }
+            .nav-logo {
+                font-family: 'JetBrains Mono', monospace;
+                color: var(--accent);
+                font-weight: 600;
+                font-size: 0.95rem;
+            }
+            .nav-links {
+                display: flex;
+                gap: 1.5rem;
+                list-style: none;
+            }
+            .nav-links a {
+                color: var(--muted);
+                text-decoration: none;
+                font-size: 0.85rem;
+                font-weight: 500;
+                transition: color 0.2s;
+            }
+            .nav-links a:hover {
+                color: var(--text);
+            }
+
+            /* ── HERO ── */
+            .hero {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 6rem 2rem 4rem;
+                background: radial-gradient(
+                    ellipse 80% 60% at 50% 0%,
+                    rgba(88, 166, 255, 0.12) 0%,
+                    transparent 70%
+                );
+            }
+            .hero-inner {
+                max-width: 720px;
+            }
+            .hero-badge {
+                display: inline-block;
+                background: rgba(88, 166, 255, 0.1);
+                border: 1px solid rgba(88, 166, 255, 0.3);
+                color: var(--accent);
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.75rem;
+                padding: 0.35rem 0.9rem;
+                border-radius: 999px;
+                margin-bottom: 1.5rem;
+                letter-spacing: 0.04em;
+            }
+            .hero h1 {
+                font-size: clamp(2.4rem, 6vw, 4rem);
+                font-weight: 800;
+                letter-spacing: -0.03em;
+                line-height: 1.1;
+                margin-bottom: 0.75rem;
+            }
+            .hero h1 span {
+                color: var(--accent);
+            }
+            .hero-subtitle {
+                font-size: 1.15rem;
+                color: var(--muted);
+                margin-bottom: 2rem;
+            }
+            .hero-contacts {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+                margin-bottom: 2.5rem;
+            }
+            .contact-chip {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 999px;
+                padding: 0.4rem 1rem;
+                font-size: 0.82rem;
+                color: var(--muted);
+                text-decoration: none;
+                transition:
+                    border-color 0.2s,
+                    color 0.2s;
+            }
+            .contact-chip:hover {
+                border-color: var(--accent);
+                color: var(--text);
+            }
+            .contact-chip svg {
+                flex-shrink: 0;
+            }
+            .hero-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: var(--accent);
+                color: #0d1117;
+                font-weight: 700;
+                font-size: 0.9rem;
+                padding: 0.7rem 1.8rem;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: opacity 0.2s;
+            }
+            .hero-cta:hover {
+                opacity: 0.85;
+            }
+
+            /* ── SECTIONS ── */
+            section {
+                padding: 5rem 2rem;
+            }
+            .container {
+                max-width: 960px;
+                margin: 0 auto;
+            }
+            .section-label {
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.75rem;
+                color: var(--accent);
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+            }
+            .section-title {
+                font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+                font-weight: 700;
+                margin-bottom: 2.5rem;
+                letter-spacing: -0.02em;
+            }
+            .divider {
+                border: none;
+                border-top: 1px solid var(--border);
+                margin-bottom: 5rem;
+            }
+
+            /* ── SOBRE ── */
+            .about-card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 2rem;
+                font-size: 1.05rem;
+                color: var(--muted);
+                line-height: 1.8;
+            }
+            .about-card strong {
+                color: var(--text);
+            }
+
+            /* ── SKILLS ── */
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.25rem;
+            }
+            .skill-group {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 1.5rem;
+            }
+            .skill-group-title {
+                font-size: 0.75rem;
+                font-family: 'JetBrains Mono', monospace;
+                color: var(--accent2);
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .tag {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid var(--border);
+                color: var(--text);
+                font-size: 0.78rem;
+                padding: 0.3rem 0.7rem;
+                border-radius: 6px;
+                font-family: 'JetBrains Mono', monospace;
+            }
+
+            /* ── TIMELINE ── */
+            .timeline {
+                position: relative;
+                padding-left: 2rem;
+            }
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: var(--border);
+            }
+            .timeline-item {
+                position: relative;
+                margin-bottom: 3rem;
+            }
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -2.42rem;
+                top: 0.35rem;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: var(--accent);
+                border: 2px solid var(--bg);
+                box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.25);
+            }
+            .timeline-item.current::before {
+                background: var(--accent2);
+                box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.25);
+            }
+            .job-header {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                gap: 0.5rem;
+                margin-bottom: 0.35rem;
+            }
+            .job-company {
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: var(--text);
+            }
+            .job-period {
+                font-size: 0.78rem;
+                font-family: 'JetBrains Mono', monospace;
+                color: var(--muted);
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid var(--border);
+                padding: 0.15rem 0.6rem;
+                border-radius: 4px;
+            }
+            .job-role {
+                font-size: 0.88rem;
+                font-weight: 600;
+                color: var(--accent);
+                margin-bottom: 0.75rem;
+            }
+            .job-desc {
+                color: var(--muted);
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+
+            /* ── EDUCATION & CERTS ── */
+            .cards-row {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.25rem;
+            }
+            .card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 1.5rem;
+                transition: border-color 0.2s;
+            }
+            .card:hover {
+                border-color: var(--accent);
+            }
+            .card-icon {
+                font-size: 1.5rem;
+                margin-bottom: 0.75rem;
+            }
+            .card-title {
+                font-size: 0.98rem;
+                font-weight: 600;
+                margin-bottom: 0.35rem;
+            }
+            .card-sub {
+                font-size: 0.82rem;
+                color: var(--muted);
+            }
+            .card-year {
+                display: inline-block;
+                margin-top: 0.75rem;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.73rem;
+                color: var(--accent2);
+                background: rgba(63, 185, 80, 0.08);
+                border: 1px solid rgba(63, 185, 80, 0.2);
+                padding: 0.15rem 0.55rem;
+                border-radius: 4px;
+            }
+
+            /* ── LANGUAGES ── */
+            .lang-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.25rem;
+            }
+            .lang-card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                padding: 1.25rem 2rem;
+                text-align: center;
+                min-width: 160px;
+            }
+            .lang-name {
+                font-weight: 700;
+                font-size: 1rem;
+                margin-bottom: 0.25rem;
+            }
+            .lang-level {
+                font-size: 0.8rem;
+                color: var(--muted);
+            }
+            .lang-dots {
+                display: flex;
+                gap: 0.3rem;
+                justify-content: center;
+                margin-top: 0.6rem;
+            }
+            .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--border);
+            }
+            .dot.active {
+                background: var(--accent);
+            }
+
+            /* ── FOOTER ── */
+            footer {
+                border-top: 1px solid var(--border);
+                padding: 2.5rem 2rem;
+                text-align: center;
+                color: var(--muted);
+                font-size: 0.82rem;
+            }
+            footer a {
+                color: var(--accent);
+                text-decoration: none;
+            }
+
+            /* ── LANG TOGGLE ── */
+            .nav-right {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+            .lang-toggle {
+                display: flex;
+                align-items: center;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                overflow: hidden;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.72rem;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                cursor: pointer;
+                flex-shrink: 0;
+            }
+            .lang-opt {
+                padding: 0.3rem 0.65rem;
+                color: var(--muted);
+                transition:
+                    background 0.2s,
+                    color 0.2s;
+                user-select: none;
+            }
+            .lang-opt.active {
+                background: var(--accent);
+                color: #0d1117;
+            }
+            .lang-sep {
+                color: var(--border);
+                font-size: 0.7rem;
+                pointer-events: none;
+            }
+
+            /* ── RESPONSIVE ── */
+            @media (max-width: 600px) {
+                .nav-links {
+                    display: none;
+                }
+                .timeline {
+                    padding-left: 1.25rem;
+                }
+                .timeline-item::before {
+                    left: -1.67rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- NAV -->
+        <nav>
+            <span class="nav-logo">&lt;thiago.dantas /&gt;</span>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#sobre" data-i18n="nav-sobre">Sobre</a></li>
+                    <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
+                    <li><a href="#experiencia" data-i18n="nav-experiencia">Experiência</a></li>
+                    <li><a href="#formacao" data-i18n="nav-formacao">Formação</a></li>
+                    <li><a href="#contato" data-i18n="nav-contato">Contato</a></li>
+                </ul>
+                <div
+                    class="lang-toggle"
+                    id="lang-toggle"
+                    role="button"
+                    aria-label="Switch language"
+                    tabindex="0"
+                >
+                    <span class="lang-opt active" id="opt-pt">PT</span>
+                    <span class="lang-sep">|</span>
+                    <span class="lang-opt" id="opt-en">EN</span>
                 </div>
-                <div class="card-costas">
-                    <a target="_blank"
-                        href="https://api.whatsapp.com/send?phone=5561981257064&text=Ol%C3%A1%20Thiago%2C%20acessei%20seu%20portif%C3%B3lio%20via%20Github%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA!!"><img
-                            class="social-logo" src="assets/img/phone-call.png" alt="whatsapp"></a>
-                    <a target="_blank" href="https://github.com/thiagododti"><img class="social-logo"
-                            src="assets/img/github.png" alt="github"></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/thiagododti/"><img class="social-logo"
-                            src="assets/img/linkedin.png" alt="linkedin"></a>
-                    <a href="mailto:t.dod@live.com"><img class="social-logo" src="assets/img/email.png" alt="email"></a>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-inner">
+                <div class="hero-badge" data-i18n="hero-badge">
+                    📍 Brasília – DF &nbsp;|&nbsp; Disponível: Presencial · Híbrido · Remoto
+                </div>
+                <h1>Thiago de<br /><span>Oliveira Dantas</span></h1>
+                <p class="hero-subtitle" data-i18n="hero-subtitle">
+                    Desenvolvedor Full Stack &amp; Analista de Dados
+                </p>
+                <div class="hero-contacts">
+                    <a class="contact-chip" href="mailto:t.dod@live.com">
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        t.dod@live.com
+                    </a>
+                    <a class="contact-chip" href="tel:+5561981257064">
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"
+                            />
+                        </svg>
+                        +55 (61) 9 8125-7064
+                    </a>
+                    <a
+                        class="contact-chip"
+                        href="https://www.linkedin.com/in/thiagododti/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                            />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a
+                        class="contact-chip"
+                        href="https://github.com/thiagododti"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                            />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+                <a class="hero-cta" href="#experiencia" data-i18n="hero-cta">Ver Experiência ↓</a>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre">
+            <div class="container">
+                <p class="section-label" data-i18n="label-sobre">// sobre</p>
+                <h2 class="section-title" data-i18n="title-sobre">Objetivo Profissional</h2>
+                <div class="about-card" data-i18n-html="about-text">
+                    Desenvolvedor <strong>Full Stack</strong> e
+                    <strong>Analista de Dados</strong> com sólida experiência na construção e
+                    evolução de soluções para <strong>automação de processos</strong>,
+                    <strong>análise de dados</strong> e <strong>sistemas web</strong>. Apaixonado
+                    por transformar dados em decisões e código em valor para o negócio. <br /><br />
+                    Atuo no desenvolvimento de <strong>APIs RESTful</strong>, sistemas integrados e
+                    interfaces modernas, sempre com foco em desempenho, organização e
+                    escalabilidade. Tenho vivência em ambientes de produção com regras de negócio
+                    complexas e integração entre múltiplas fontes de dados. <br /><br />
+                    CNH Ativa: <strong>B</strong> &nbsp;·&nbsp; Disponibilidade:
+                    <strong>Presencial, Híbrido e Remoto</strong>
                 </div>
             </div>
-        </div>
-    </div>
-    <footer>
-        <div class="flex-container footer">
-            <p>Desenvolvido por Thiago de Oliveira Dantas - 2022</p>
-            <a href="#" id="btn-dm">Dark Mode</a>
-        </div>
+        </section>
 
-    </footer>
-    <script src="assets/js/darkmode.js"></script>
-</body>
+        <hr class="divider" />
 
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="container">
+                <p class="section-label" data-i18n="label-skills">// habilidades</p>
+                <h2 class="section-title" data-i18n="title-skills">Stack &amp; Tecnologias</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <p class="skill-group-title" data-i18n="skill-backend">Back-end</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Django REST</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-title" data-i18n="skill-frontend">Front-end</p>
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-title" data-i18n="skill-db">Banco de Dados</p>
+                        <div class="tags">
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">SQLite</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-title" data-i18n="skill-data">Dados &amp; BI</p>
+                        <div class="tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-title" data-i18n="skill-integrations">
+                            Integrações &amp; APIs
+                        </p>
+                        <div class="tags">
+                            <span class="tag">API REST</span>
+                            <span class="tag">GraphQL</span>
+                            <span class="tag">N8N</span>
+                            <span class="tag">RabbitMQ</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-title" data-i18n="skill-devops">
+                            DevOps &amp; Ferramentas
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Docker</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- EXPERIÊNCIA -->
+        <section id="experiencia">
+            <div class="container">
+                <p class="section-label" data-i18n="label-exp">// experiência</p>
+                <h2 class="section-title" data-i18n="title-exp">Histórico Profissional</h2>
+                <div class="timeline">
+                    <!-- Alldax -->
+                    <div class="timeline-item current">
+                        <div class="job-header">
+                            <span class="job-company">Alldax Contabilidade</span>
+                            <span class="job-period" data-i18n="job1-period"
+                                >Jan 2024 – Presente</span
+                            >
+                        </div>
+                        <p class="job-role" data-i18n="job1-role">Desenvolvedor Full Stack Pleno</p>
+                        <p class="job-desc" data-i18n-html="job1-desc">
+                            Atuo na construção e evolução de soluções internas para
+                            <strong style="color: var(--text)">automação de processos</strong> e
+                            <strong style="color: var(--text)">análise de dados</strong>. Desenvolvo
+                            APIs e sistemas web que integram diferentes fontes de dados, com foco em
+                            desempenho, organização e escalabilidade. <br /><br />
+                            Implemento regras de negócio complexas, incluindo migração de lógicas
+                            SQL para código, otimização de consultas e integração com APIs externas.
+                            No front-end, entrego interfaces com foco em usabilidade e eficiência
+                            operacional. Também crio soluções para rastreabilidade de execuções,
+                            geração de indicadores e mensuração de ganhos operacionais.
+                        </p>
+                    </div>
+
+                    <!-- Rossi -->
+                    <div class="timeline-item">
+                        <div class="job-header">
+                            <span class="job-company">Rossi Soluções – Segurança LTDA</span>
+                            <span class="job-period" data-i18n="job2-period"
+                                >Set 2019 – Nov 2024</span
+                            >
+                        </div>
+                        <p class="job-role" data-i18n="job2-role">Técnico de Suporte em TI</p>
+                        <p class="job-desc" data-i18n-html="job2-desc">
+                            Responsável pela
+                            <strong style="color: var(--text)">infraestrutura de redes</strong> e
+                            administração de servidores (Samba, Windows Server, pfSense, Imperius
+                            Backup). Manutenção de sistemas, controle de câmeras e acessos de
+                            segurança (biometria e reconhecimento facial). Desenvolvimento de
+                            <strong style="color: var(--text)"
+                                >relatórios e dashboards no Power BI</strong
+                            >
+                            e saneamento de dados do ERP.
+                        </p>
+                    </div>
+
+                    <!-- Boticário -->
+                    <div class="timeline-item">
+                        <div class="job-header">
+                            <span class="job-company">O Boticário</span>
+                            <span class="job-period" data-i18n="job3-period"
+                                >Jan 2012 – Set 2019</span
+                            >
+                        </div>
+                        <p class="job-role" data-i18n="job3-role">
+                            Subgerente · Aux. Administrativo · Caixa · Estoquista
+                        </p>
+                        <p class="job-desc" data-i18n="job3-desc">
+                            Atuação em múltiplas frentes operacionais ao longo de 7 anos,
+                            desenvolvendo habilidades em gestão de equipes, atendimento ao cliente,
+                            controle de estoque e processos administrativos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- FORMAÇÃO -->
+        <section id="formacao">
+            <div class="container">
+                <p class="section-label" data-i18n="label-edu">// formação</p>
+                <h2 class="section-title" data-i18n="title-edu">Educação &amp; Certificações</h2>
+                <div class="cards-row">
+                    <div class="card">
+                        <div class="card-icon">🎓</div>
+                        <p class="card-title" data-i18n="card1-title">
+                            Análise e Desenvolvimento de Sistemas
+                        </p>
+                        <p class="card-sub">UniProjeção</p>
+                        <span class="card-year" data-i18n="card1-year">Graduação Completa</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">☕</div>
+                        <p class="card-title" data-i18n="card2-title">
+                            Programação Orientada a Objetos com Java
+                        </p>
+                        <p class="card-sub">Caelum — 40h</p>
+                        <span class="card-year">2021</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🐍</div>
+                        <p class="card-title" data-i18n="card3-title">Intensivo de Python</p>
+                        <p class="card-sub">#ashtag — 8h</p>
+                        <span class="card-year">2023</span>
+                    </div>
+                </div>
+
+                <!-- Idiomas -->
+                <br /><br />
+                <p class="section-label" data-i18n="label-lang">// idiomas</p>
+                <h2 class="section-title" data-i18n="title-lang">Idiomas</h2>
+                <div class="lang-row">
+                    <div class="lang-card">
+                        <p class="lang-name" data-i18n="lang1-name">Português</p>
+                        <p class="lang-level" data-i18n="lang1-level">Nativo</p>
+                        <div class="lang-dots">
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                        </div>
+                    </div>
+                    <div class="lang-card">
+                        <p class="lang-name" data-i18n="lang2-name">Inglês</p>
+                        <p class="lang-level" data-i18n="lang2-level">
+                            Intermediário (leitura/escrita) · Básico (conversação)
+                        </p>
+                        <div class="lang-dots">
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER / CONTATO -->
+        <footer id="contato">
+            <p data-i18n-html="footer-text">
+                Desenvolvido por <strong>Thiago de Oliveira Dantas</strong> · Brasília – DF
+            </p>
+            <p style="margin-top: 0.5rem">
+                <a href="mailto:t.dod@live.com">t.dod@live.com</a> &nbsp;·&nbsp;
+                <a href="https://www.linkedin.com/in/thiagododti/" target="_blank" rel="noopener"
+                    >LinkedIn</a
+                >
+                &nbsp;·&nbsp;
+                <a href="https://github.com/thiagododti" target="_blank" rel="noopener">GitHub</a>
+            </p>
+        </footer>
+        <script>
+            const translations = {
+                pt: {
+                    'html-lang': 'pt-BR',
+                    'page-title': 'Thiago Dantas – Desenvolvedor Full Stack',
+                    'nav-sobre': 'Sobre',
+                    'nav-skills': 'Skills',
+                    'nav-experiencia': 'Experiência',
+                    'nav-formacao': 'Formação',
+                    'nav-contato': 'Contato',
+                    'hero-badge':
+                        '📍 Brasília – DF \u00a0|\u00a0 Disponível: Presencial · Híbrido · Remoto',
+                    'hero-subtitle': 'Desenvolvedor Full Stack & Analista de Dados',
+                    'hero-cta': 'Ver Experiência ↓',
+                    'label-sobre': '// sobre',
+                    'title-sobre': 'Objetivo Profissional',
+                    'about-text':
+                        'Desenvolvedor <strong>Full Stack</strong> e <strong>Analista de Dados</strong> com sólida experiência na construção e evolução de soluções para <strong>automação de processos</strong>, <strong>análise de dados</strong> e <strong>sistemas web</strong>. Apaixonado por transformar dados em decisões e código em valor para o negócio.<br><br>Atuo no desenvolvimento de <strong>APIs RESTful</strong>, sistemas integrados e interfaces modernas, sempre com foco em desempenho, organização e escalabilidade. Tenho vivência em ambientes de produção com regras de negócio complexas e integração entre múltiplas fontes de dados.<br><br>CNH Ativa: <strong>B</strong> &nbsp;·&nbsp; Disponibilidade: <strong>Presencial, Híbrido e Remoto</strong>',
+                    'label-skills': '// habilidades',
+                    'title-skills': 'Stack & Tecnologias',
+                    'skill-backend': 'Back-end',
+                    'skill-frontend': 'Front-end',
+                    'skill-db': 'Banco de Dados',
+                    'skill-data': 'Dados & BI',
+                    'skill-integrations': 'Integrações & APIs',
+                    'skill-devops': 'DevOps & Ferramentas',
+                    'label-exp': '// experiência',
+                    'title-exp': 'Histórico Profissional',
+                    'job1-period': 'Jan 2024 – Presente',
+                    'job1-role': 'Desenvolvedor Full Stack Pleno',
+                    'job1-desc':
+                        'Atuo na construção e evolução de soluções internas para <strong style="color:var(--text)">automação de processos</strong> e <strong style="color:var(--text)">análise de dados</strong>. Desenvolvo APIs e sistemas web que integram diferentes fontes de dados, com foco em desempenho, organização e escalabilidade.<br><br>Implemento regras de negócio complexas, incluindo migração de lógicas SQL para código, otimização de consultas e integração com APIs externas. No front-end, entrego interfaces com foco em usabilidade e eficiência operacional. Também crio soluções para rastreabilidade de execuções, geração de indicadores e mensuração de ganhos operacionais.',
+                    'job2-period': 'Set 2019 – Nov 2024',
+                    'job2-role': 'Técnico de Suporte em TI',
+                    'job2-desc':
+                        'Responsável pela <strong style="color:var(--text)">infraestrutura de redes</strong> e administração de servidores (Samba, Windows Server, pfSense, Imperius Backup). Manutenção de sistemas, controle de câmeras e acessos de segurança (biometria e reconhecimento facial). Desenvolvimento de <strong style="color:var(--text)">relatórios e dashboards no Power BI</strong> e saneamento de dados do ERP.',
+                    'job3-period': 'Jan 2012 – Set 2019',
+                    'job3-role': 'Subgerente · Aux. Administrativo · Caixa · Estoquista',
+                    'job3-desc':
+                        'Atuação em múltiplas frentes operacionais ao longo de 7 anos, desenvolvendo habilidades em gestão de equipes, atendimento ao cliente, controle de estoque e processos administrativos.',
+                    'label-edu': '// formação',
+                    'title-edu': 'Educação & Certificações',
+                    'card1-title': 'Análise e Desenvolvimento de Sistemas',
+                    'card1-year': 'Graduação Completa',
+                    'card2-title': 'Programação Orientada a Objetos com Java',
+                    'card3-title': 'Intensivo de Python',
+                    'label-lang': '// idiomas',
+                    'title-lang': 'Idiomas',
+                    'lang1-name': 'Português',
+                    'lang1-level': 'Nativo',
+                    'lang2-name': 'Inglês',
+                    'lang2-level': 'Intermediário (leitura/escrita) · Básico (conversação)',
+                    'footer-text':
+                        'Desenvolvido por <strong>Thiago de Oliveira Dantas</strong> · Brasília – DF',
+                },
+                en: {
+                    'html-lang': 'en',
+                    'page-title': 'Thiago Dantas – Full Stack Developer',
+                    'nav-sobre': 'About',
+                    'nav-skills': 'Skills',
+                    'nav-experiencia': 'Experience',
+                    'nav-formacao': 'Education',
+                    'nav-contato': 'Contact',
+                    'hero-badge':
+                        '📍 Brasília – DF \u00a0|\u00a0 Available: On-site · Hybrid · Remote',
+                    'hero-subtitle': 'Full Stack Developer & Data Analyst',
+                    'hero-cta': 'See Experience ↓',
+                    'label-sobre': '// about',
+                    'title-sobre': 'Professional Objective',
+                    'about-text':
+                        "<strong>Full Stack</strong> Developer and <strong>Data Analyst</strong> with solid experience building and evolving solutions for <strong>process automation</strong>, <strong>data analysis</strong>, and <strong>web systems</strong>. Passionate about turning data into decisions and code into business value.<br><br>I work on the development of <strong>RESTful APIs</strong>, integrated systems, and modern interfaces, always focused on performance, organization, and scalability. I have hands-on experience in production environments with complex business rules and integration across multiple data sources.<br><br>Driver's License: <strong>B</strong> &nbsp;·&nbsp; Availability: <strong>On-site, Hybrid and Remote</strong>",
+                    'label-skills': '// skills',
+                    'title-skills': 'Stack & Technologies',
+                    'skill-backend': 'Back-end',
+                    'skill-frontend': 'Front-end',
+                    'skill-db': 'Databases',
+                    'skill-data': 'Data & BI',
+                    'skill-integrations': 'Integrations & APIs',
+                    'skill-devops': 'DevOps & Tools',
+                    'label-exp': '// experience',
+                    'title-exp': 'Work History',
+                    'job1-period': 'Jan 2024 – Present',
+                    'job1-role': 'Mid-level Full Stack Developer',
+                    'job1-desc':
+                        'Working on building and evolving internal solutions for <strong style="color:var(--text)">process automation</strong> and <strong style="color:var(--text)">data analysis</strong>. I develop APIs and web systems that integrate different data sources, focused on performance, organization, and scalability.<br><br>I implement complex business rules, including migrating SQL logic to code, query optimization, and integration with external APIs. On the front-end, I deliver interfaces focused on usability and operational efficiency. I also build solutions for execution traceability, KPI generation, and measuring operational gains.',
+                    'job2-period': 'Sep 2019 – Nov 2024',
+                    'job2-role': 'IT Support Technician',
+                    'job2-desc':
+                        'Responsible for <strong style="color:var(--text)">network infrastructure</strong> and server administration (Samba, Windows Server, pfSense, Imperius Backup). Systems maintenance, control of cameras and security access (biometrics and facial recognition). Development of <strong style="color:var(--text)">reports and dashboards in Power BI</strong> and ERP data sanitization.',
+                    'job3-period': 'Jan 2012 – Sep 2019',
+                    'job3-role': 'Assistant Manager · Admin. Asst. · Cashier · Stock',
+                    'job3-desc':
+                        'Worked across multiple operational areas over 7 years, developing skills in team management, customer service, inventory control, and administrative processes.',
+                    'label-edu': '// education',
+                    'title-edu': 'Education & Certifications',
+                    'card1-title': 'Systems Analysis and Development',
+                    'card1-year': 'Complete Degree',
+                    'card2-title': 'Object-Oriented Programming with Java',
+                    'card3-title': 'Python Intensive',
+                    'label-lang': '// languages',
+                    'title-lang': 'Languages',
+                    'lang1-name': 'Portuguese',
+                    'lang1-level': 'Native',
+                    'lang2-name': 'English',
+                    'lang2-level': 'Intermediate (reading/writing) · Basic (speaking)',
+                    'footer-text':
+                        'Developed by <strong>Thiago de Oliveira Dantas</strong> · Brasília – DF',
+                },
+            };
+
+            let currentLang = 'pt';
+
+            function setLang(lang) {
+                const t = translations[lang];
+                currentLang = lang;
+                document.getElementById('html-root').lang = t['html-lang'];
+                document.title = t['page-title'];
+                document.querySelectorAll('[data-i18n]').forEach((el) => {
+                    const key = el.getAttribute('data-i18n');
+                    if (t[key] !== undefined) el.textContent = t[key];
+                });
+                document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+                    const key = el.getAttribute('data-i18n-html');
+                    if (t[key] !== undefined) el.innerHTML = t[key];
+                });
+                document.getElementById('opt-pt').classList.toggle('active', lang === 'pt');
+                document.getElementById('opt-en').classList.toggle('active', lang === 'en');
+            }
+
+            document.getElementById('lang-toggle').addEventListener('click', () => {
+                setLang(currentLang === 'pt' ? 'en' : 'pt');
+            });
+
+            document.getElementById('lang-toggle').addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setLang(currentLang === 'pt' ? 'en' : 'pt');
+                }
+            });
+        </script>
+    </body>
 </html>
-
-<!-- <a href="https://www.flaticon.com/br/icones-gratis/ui" title="ui ícones">Ui ícones criados por Eucalyp - Flaticon</a> -->
